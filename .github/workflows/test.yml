@@ -19,3 +19,18 @@ jobs:
     steps:
       - name: print greeting
         run: echo "done"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci #same as npm intall but utilizes package lock
+      - name: build
+        run: npm run build
+      - name: Deploy
+        run: echo "deploying..."
