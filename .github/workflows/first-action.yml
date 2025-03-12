@@ -1,0 +1,15 @@
+# Name of Workflow or action
+name: First Workflow
+
+#On: trigger in which the workflow will run
+on: workflow_dispatch #workflow_dispatch - Manually start workflow
+
+#
+jobs: # Doesn't take value directly
+  first-job: #Name can be anything and doesn't take a value directly
+    runs-on: ubuntu-latest #Define runner in which job will execute
+    steps:
+      - name: Print greeeting
+        run: echo "Hello Matt"
+      - name: print goodbue
+        run: echo "Done, Goodbye"
