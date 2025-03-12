@@ -13,4 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm ci #same as npm intall but utilizes package lock
       - name: Run tests
-        run: npm test  
+        run: npm test 
+  next-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print greeting
+        run: echo "done"
