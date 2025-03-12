@@ -10,6 +10,8 @@ jobs: # Doesn't take value directly
     runs-on: ubuntu-latest #Define runner in which job will execute
     steps:
       - name: Print greeeting
-        run: echo "Hello Matt"
+        run: |
+          echo "Hello Matt"
+          echo "This is a multi line output"
       - name: print goodbue
         run: echo "Done, Goodbye"
